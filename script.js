@@ -16,14 +16,14 @@
 
 // Create the Factory class bellow:
 class factory {
-  constructor(make, location, airbags, abs, warranty) {
-    this.make = make;
-    this.location = location;
-    this.airbags = airbags;
-    this.abs = abs;
-    this.warranty = warranty;
+  constructor() {
+    this.make = "Mazda";
+    this.location = "USA";
+    this.airbags = true;
+    this.abs = true;
+    this.warranty = "60,000 miles / 3 years";
     this.massBuild = function(quantity, options){
-      return console.log(`Building ${quantity} ${options} ${options} ${options}'s`);
+      return `Building ${quantity} ${options.color} ${options.trim} ${options.model}'s`;
     };
     this.customerBuild = function(color, options){
       return console.log();
@@ -40,8 +40,28 @@ class factory {
 // It should specifically inherit the warranty property from Factory so we can modify it.
 // Car should also have the following additional properties: enginesize (4), navigation (true), backupcamera (true), warranty (100,000 miles / 5 years)
 // Write your code below:
-
-
+class car extends factory {
+  constructor(model, doors, color, enginetype, transmission, trim, wheelstrim, audio, seatstrim, moonroof) {
+    super();
+    this.model = model;
+    this.doors = doors;
+    this.color = color;
+    this.enginetype = enginetype;
+    this.transmission = transmission;
+    this.trim = trim;
+    this.wheelstrim = wheelstrim;
+    this.audio = audio;
+    this.seatstrim = seatstrim;
+    this.moonroof = moonroof;
+    this.enginesize = 4;
+    this.navigation = true;
+    this.backupcamera = true;
+    this.warranty = "100,000 miles / 5 years";
+  }
+}
+// let spiderMonkey = new factory("Mazda", "USA", true, true, "60,000 miles / 3 years");
+let spiderMonkey = new car("Car", 4, "red", "hybrid", "automatic", "sport", "Base", "premium", "leather", true);
+// console.log(spiderMonkey)
 
 
 // CREATE A SUB-CLASS CALLED SPORT
@@ -49,7 +69,15 @@ class factory {
 // The constructor should have the following properties: model, trim, transmission, top, color, seatstrim, audio, wheelstrim. The values should be specified when creating an instance of Sport.
 // Sports cars should also have the following additional properties: moonroof (false), enginetype (gasoline), convertible (true), doors (2)
 // Write your code below:
-
+class sport extends car {
+  constructor(model, color, transmission, trim, wheelstrim, audio, seatstrim, top) {
+    super(model, 2, color, "gasoline", transmission, trim, wheelstrim, audio, seatstrim, false);
+    this.convertible = true;
+  }
+}
+let sportyMonkey = new sport("Mazda3Speed", "red", "automatic", "convertible", "red", "premium", "leather", true);
+console.log(sportyMonkey)
+console.log(sportyMonkey.massBuild(3, sportyMonkey))
 
 
 
