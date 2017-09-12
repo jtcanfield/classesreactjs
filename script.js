@@ -123,7 +123,7 @@ console.log(mazda3.massBuild(3));
 // Print, calling customerBuild(), building one yellow mazda3 with the following options, as an array: weather package, satellite radio, rear spoiler.
 // It should read: "Building one yellow Touring Mazda3 with the following options: weather package, satellite radio, rear spoiler"
 // Write your code below:
-console.log(mazda3.customerBuild("yellow", mazda3));
+console.log(mazda3.customerBuild("Yellow", [" Weather Package", " Satellite Radio", " Rear Spoiler"]));
 
 
 
@@ -134,14 +134,12 @@ console.log(mazda3.customerBuild("yellow", mazda3));
 
 // Write your 'miataRf' instance below:
 // Write your code below:
-
-
-
+let miataRf = new Sport("Miata-RF", "Red", "Manual", "Grand Touring", "Premium", "Premium", "Leather", "Hard Top");
 
 
 // Print miataRf. It should have all of the above properties. Plus, the extended warranty.
 // Write your code below:
-
+console.log(miataRf);
 
 
 
