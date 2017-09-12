@@ -117,7 +117,7 @@ console.log(mazda3);
 // Print calling massBuild(), building 35000 cars.
 // It should print: "Building 35000 Red Touring Mazda3's."
 // Write your code below:
-console.log(mazda3.massBuild(3));
+console.log(mazda3.massBuild(35000));
 
 
 // Print, calling customerBuild(), building one yellow mazda3 with the following options, as an array: weather package, satellite radio, rear spoiler.
@@ -142,20 +142,16 @@ let miataRf = new Sport("Miata-RF", "Red", "Manual", "Grand Touring", "Premium",
 console.log(miataRf);
 
 
-
-
 // Print miataRf, calling massBuild(), building 15,000
 // It should print: "Building 15000 Red Grand Touring Miata-RF's."
 // Write your code below:
-
-
-
+console.log(miataRf.massBuild(15000));
 
 
 // Print miataRf, calling customerBuild(), building one black Miata-Rf with the following options, as an array: hid headlights, sports suspension, leather steering wheel, heated seats, adaptive cruise control.
 // It should read: "Building one black Grand Touring Miata-RF with the following options: hid headlights, sports suspension, leather steering wheel, heated seats, adaptive cruise control"
 // Write your code below:
-
+console.log(miataRf.customerBuild("Black", [" Hid Headlights"," Sports Suspension"," Leather Steering Wheel"," Heated Seats"," Adaptive Cruise Control"]));
 
 
 
@@ -165,7 +161,9 @@ console.log(miataRf);
 
 // Write your 'trailBlazer' instance below:
 // Write your code below:
-
+model (Trail Blazer), color (blue), trim (Sport), enginesize (8), hitch (true), bed (standard), navigation (true), doors (2)
+constructor(model, color, enginesize, hitch, bed, navigation) {
+let miataRf = new Sport("Miata-RF", "Red", "Manual", "Grand Touring", "Premium", "Premium", "Leather", "Hard Top");
 
 
 
