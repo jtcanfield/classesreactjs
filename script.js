@@ -15,6 +15,21 @@
 // It should print "Building one COLOR TRIM MODEL with the following options: OPTIONS", i.e: "Building one red Sport Mazda3 with the following options: heated seats, rear spoiler"
 
 // Create the Factory class bellow:
+class factory {
+  constructor(make, location, airbags, abs, warranty) {
+    this.make = make;
+    this.location = location;
+    this.airbags = airbags;
+    this.abs = abs;
+    this.warranty = warranty;
+    this.massBuild = function(quantity, options){
+      return console.log(`Building ${quantity} ${options} ${options} ${options}'s`);
+    };
+    this.customerBuild = function(color, options){
+      return console.log();
+    };
+  }
+}
 
 
 
