@@ -164,7 +164,8 @@ console.log(miataRf.customerBuild("Black", [" Hid Headlights"," Sports Suspensio
                 // trim (Sport), doors (2)
 // constructor(model, color, enginesize, hitch, bed, navigation) {
 let trailBlazer = new Truck("Trail Blazer", "Blue", 8, true, "Standard", true);
-
+trailBlazer.trim = "Sport";
+trailBlazer.doors = 2;
 
 // Print trailBlazer. It should have all the above properties. Plus, the extended warranty.
 // Write your code below:
