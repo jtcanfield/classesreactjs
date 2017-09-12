@@ -23,10 +23,10 @@ class Factory {
     this.abs = true;
     this.warranty = "60,000 miles / 3 years";
     this.massBuild = function(quantity, options){
-      return `Building ${quantity} ${options.color} ${options.trim} ${options.model}'s`;
+      return `Building ${quantity} ${this.color} ${this.trim} ${this.model}'s`;
     };
     this.customerBuild = function(color, options){
-      return console.log();
+      return `Building one ${color} ${this.trim} ${this.model}  with the following options: ${options}`;
     };
   }
 }
@@ -106,31 +106,24 @@ class Truck extends Factory {
 // Create an instance  Car.
 // The following properties must be specified: model (mazda3), color (red), enginetype (hybrid), transmission (automatic), trim (touring), wheels (base), audio (premium), seats (leather), and moonroof (true)
 // Write your 'mazda3' instance below:
-
-let mazda3 = new Car("Mazda3", 4, "red", "hybrid", "automatic", "touring", "Base", "premium", "leather", true);
+let mazda3 = new Car("Mazda3", 4, "Red", "Hybrid", "Automatic", "Touring", "Base", "Premium", "Leather", true);
 
 
 // Print mazda3. It should have all the above properties.
 // Write your code below:
-
-
 console.log(mazda3);
-// console.log(mazda3.massBuild(3, mazda3))
-
 
 
 // Print calling massBuild(), building 35000 cars.
 // It should print: "Building 35000 Red Touring Mazda3's."
 // Write your code below:
-
-
-
+console.log(mazda3.massBuild(3));
 
 
 // Print, calling customerBuild(), building one yellow mazda3 with the following options, as an array: weather package, satellite radio, rear spoiler.
 // It should read: "Building one yellow Touring Mazda3 with the following options: weather package, satellite radio, rear spoiler"
 // Write your code below:
-
+console.log(mazda3.customerBuild("yellow", mazda3));
 
 
 
